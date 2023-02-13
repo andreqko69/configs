@@ -4,8 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = (env, argv) => {
   const mode = argv.mode;
-  const DEV_MODE = 'development';
-  const isDevelopment = mode === DEV_MODE;
+  const isDevelopment = mode === 'development';
   const nodeModulesPath = path.join(__dirname, '/node-modules');
 
   return {
