@@ -2,9 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = (env, argv) => {
-  const mode = argv.mode;
-  const isDevelopment = mode === 'development';
+module.exports = ({ __dirname, isDevelopment }) => {
   const nodeModulesPath = path.join(__dirname, '/node-modules');
 
   return {
