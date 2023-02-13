@@ -2,12 +2,11 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const nodeModulesPath = path.join(__dirname, '/node-modules');
-const DEV_MODE = 'development';
-
 module.exports = (env, argv) => {
   const mode = argv.mode;
+  const DEV_MODE = 'development';
   const isDevelopment = mode === DEV_MODE;
+  const nodeModulesPath = path.join(__dirname, '/node-modules');
 
   return {
     entry: path.join(__dirname, '/src', 'index.tsx'),
