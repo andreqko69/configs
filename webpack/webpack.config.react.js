@@ -75,6 +75,7 @@ module.exports = (env, argv) => {
       }),
       new webpack.DefinePlugin({
         isDevelopment,
+        isProduction: !isDevelopment
       }),
     ],
   };
