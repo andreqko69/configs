@@ -1,8 +1,6 @@
 const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = ({ __dirname, isDevelopment }) => {
+module.exports = ({ __dirname, isDevelopment = true, overrides = {} }) => {
   const nodeModulesPath = path.join(__dirname, '/node-modules');
 
   return {
@@ -65,15 +63,6 @@ module.exports = ({ __dirname, isDevelopment }) => {
       path: path.join(__dirname, '/dist'),
       filename: 'index.bundle.js',
     },
-    plugins: [
-      new HtmlWebpackPlugin({
-        template: path.join(__dirname, 'public', 'index.html'),
-        favicon: path.join(__dirname, 'public', 'favicons', 'favicon.png'),
-      }),
-      new webpack.DefinePlugin({
-        isDevelopment,
-        isProduction: !isDevelopment
-      }),
-    ],
-  };
+    ...overrides
+  }
 };
