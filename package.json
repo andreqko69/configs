@@ -16,7 +16,7 @@
     "url": "https://github.com/andreqko69/configs/issues"
   },
   "homepage": "https://github.com/andreqko69/configs#readme",
-  "peerDependencies": {
+  "devDependencies": {
     "@typescript-eslint/eslint-plugin": "5.52.0",
     "@typescript-eslint/parser": "5.52.0",
     "@tsconfig/node16": "1.0.3",
