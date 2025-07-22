@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   // Line length - balances readability with screen space
   printWidth: 80,
 
